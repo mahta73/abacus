@@ -1,24 +1,33 @@
-import React, {Fragment} from 'react';
-import {
-            StyleSheet, 
-            Image, 
-            Dimensions
-        } from 'react-native';
+import React from 'react';
+import { View, Image, StyleSheet, Text } from 'react-native';
 
 export default function OurMoto() {
     return (
-        <Fragment>
-            <Image 
-                style = {styles.banner}
-                source = {require('./imgs/abacusBanner.png')}
-            />
-        </Fragment>
+        <View>
+        <View
+            style = {styles.container}
+        >
+            <View>
+                <Image     
+                    source = {require('./imgs/abacusBanner.png')}
+                />
+            </View>
+            <View>
+                <Text>
+                    Freedom when you want it,
+                </Text>
+                <Text>
+                    structure where you choose it.
+                </Text>
+            </View>
+        </View>
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
-    banner: {
-        width: Dimensions.get('window').width,
-        marginBottom: 25
-    }
-});
+    container: {
+        flex: 1,
+        flexDirection: 'row'
+    },
+})
